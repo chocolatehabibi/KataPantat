@@ -1,0 +1,21 @@
+KataPantat uses Malay dictionary data derived from the
+Malay (Malaysia) Hunspell dictionary ecosystem.
+
+The Malay dictionary is listed by the Hunspell dictionary
+catalogue under the GNU Free Documentation License (GFDL).
+
+This file is provided to preserve attribution and licensing
+information for the dictionary data used by KataPantat.
+
+KataPantat itself is an independent game and website and is
+not affiliated with Hunspell, LibreOffice, OpenOffice or
+the original dictionary contributors.
+
+Dictionary source:
+Malay (Malaysia) Hunspell dictionary (ms_MY)
+
+Hunspell dictionary catalogue:
+https://github.com/elastic/hunspell
+
+Please retain the applicable upstream licence and attribution
+requirements when distributing or modifying dictionary data.
