@@ -1,25 +1,33 @@
-KataPantat Malay Dictionary Attribution
+KataPantat Dictionary Data
 
-The broad Malay dictionary data used by KataPantat is sourced from:
-
-tdulcet/compact-dictionaries
-
-The Malay dictionary is derived from Wiktionary data.
-
-Wiktionary data is licensed under:
-
-Creative Commons Attribution-ShareAlike 3.0 Unported License (CC BY-SA 3.0)
-
-and
-
-GNU Free Documentation License (GFDL).
+KataPantat uses vocabulary data derived from the Malay-language
+edition of Wiktionary through Kaikki.org / Wiktextract.
 
 Source:
-https://github.com/tdulcet/compact-dictionaries
+https://kaikki.org/mswiktionary/
 
-The dictionary repository states that users must attribute Wiktionary.
+The Kaikki machine-readable dictionary data is extracted from
+Wiktionary and is made available under the same licenses as
+Wiktionary, including Creative Commons Attribution-ShareAlike
+(CC BY-SA) and the GNU Free Documentation License (GFDL).
 
-KataPantat does not claim ownership of the underlying dictionary data.
+The source data is updated regularly.
 
-The KataPantat game software, design, branding and original game
-implementation are separate from the underlying dictionary data.
+KataPantat's dictionary processing extracts five-letter
+alphabetic entries for use in the game.
+
+The extracted data may contain uncommon, technical, archaic,
+variant, or otherwise unsuitable entries. KataPantat therefore
+uses a separate curated answer list for daily puzzles.
+
+KataPantat does not reproduce the proprietary contents of
+Kamus Dewan or other proprietary dictionary databases.
+
+Wiktionary:
+https://www.wiktionary.org/
+
+Kaikki:
+https://kaikki.org/
+
+Wiktextract:
+https://github.com/tatuylonen/wiktextract
