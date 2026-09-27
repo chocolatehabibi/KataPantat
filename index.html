@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ms">
 <head>
@@ -14,6 +15,7 @@
 <meta property="og:type" content="website">
 
 <style>
+
 *{
     box-sizing:border-box;
 }
@@ -71,7 +73,7 @@ header{
 }
 
 /* =========================
-   PAGE LAYOUT
+   PAGE
 ========================= */
 
 .page{
@@ -90,7 +92,7 @@ header{
 }
 
 /* =========================
-   SIDE ADS
+   ADS
 ========================= */
 
 .ad-rail{
@@ -493,6 +495,7 @@ footer{
         margin-top:30px;
     }
 }
+
 </style>
 </head>
 
@@ -501,18 +504,29 @@ footer{
 <div class="site">
 
 <header>
-    <div class="logo">Kata<span>Pantat</span></div>
 
-    <button class="stats-button" onclick="toggleStats()" aria-label="Statistik">
+    <div class="logo">
+        Kata<span>Pantat</span>
+    </div>
+
+    <button
+        class="stats-button"
+        onclick="toggleStats()"
+        aria-label="Statistik">
         📊
     </button>
+
 </header>
+
 
 <div class="page">
 
-    <!-- LEFT DESKTOP AD -->
+    <!-- LEFT AD -->
+
     <aside class="ad-rail">
+
         <div class="ad-sticky">
+
             <div class="ad-box">
                 IKLAN
             </div>
@@ -520,12 +534,18 @@ footer{
             <div class="ad-box">
                 IKLAN
             </div>
+
         </div>
+
     </aside>
+
 
     <main class="main">
 
+        <!-- HERO -->
+
         <section class="hero">
+
             <h1>KataPantat</h1>
 
             <p>
@@ -533,23 +553,45 @@ footer{
                 Cari perkataan 5 huruf dalam 6 percubaan.
             </p>
 
-            <div class="puzzle-info" id="puzzleInfo"></div>
+            <div
+                class="puzzle-info"
+                id="puzzleInfo">
+            </div>
+
         </section>
 
-        <!-- MOBILE/TABLET AD -->
+
+        <!-- MOBILE AD -->
+
         <div class="mobile-ad">
             IKLAN
         </div>
 
+
+        <!-- GAME -->
+
         <section class="game-card">
 
-            <div class="board" id="board"></div>
+            <div
+                class="board"
+                id="board">
+            </div>
 
-            <div class="message" id="message"></div>
 
-            <div class="keyboard" id="keyboard">
+            <div
+                class="message"
+                id="message">
+            </div>
+
+
+            <!-- KEYBOARD -->
+
+            <div
+                class="keyboard"
+                id="keyboard">
 
                 <div class="keyboard-row">
+
                     <button class="key" data-key="q">Q</button>
                     <button class="key" data-key="w">W</button>
                     <button class="key" data-key="e">E</button>
@@ -560,9 +602,12 @@ footer{
                     <button class="key" data-key="i">I</button>
                     <button class="key" data-key="o">O</button>
                     <button class="key" data-key="p">P</button>
+
                 </div>
 
+
                 <div class="keyboard-row">
+
                     <button class="key" data-key="a">A</button>
                     <button class="key" data-key="s">S</button>
                     <button class="key" data-key="d">D</button>
@@ -572,10 +617,18 @@ footer{
                     <button class="key" data-key="j">J</button>
                     <button class="key" data-key="k">K</button>
                     <button class="key" data-key="l">L</button>
+
                 </div>
 
+
                 <div class="keyboard-row">
-                    <button class="key wide" data-key="enter">ENTER</button>
+
+                    <button
+                        class="key wide"
+                        data-key="enter">
+                        ENTER
+                    </button>
+
                     <button class="key" data-key="z">Z</button>
                     <button class="key" data-key="x">X</button>
                     <button class="key" data-key="c">C</button>
@@ -583,60 +636,121 @@ footer{
                     <button class="key" data-key="b">B</button>
                     <button class="key" data-key="n">N</button>
                     <button class="key" data-key="m">M</button>
-                    <button class="key wide" data-key="backspace">⌫</button>
+
+                    <button
+                        class="key wide"
+                        data-key="backspace">
+                        ⌫
+                    </button>
+
                 </div>
 
             </div>
 
         </section>
 
-        <section class="result" id="result">
+
+        <!-- RESULT -->
+
+        <section
+            class="result"
+            id="result">
 
             <h2 id="resultTitle"></h2>
 
-            <div class="result-score" id="resultScore"></div>
+            <div
+                class="result-score"
+                id="resultScore">
+            </div>
 
-            <div class="result-answer" id="resultAnswer"></div>
+            <div
+                class="result-answer"
+                id="resultAnswer">
+            </div>
 
             <button onclick="shareResult()">
                 Kongsi Keputusan
             </button>
 
-            <div class="share" id="shareText"></div>
+            <div
+                class="share"
+                id="shareText">
+            </div>
 
         </section>
 
-        <!-- MOBILE AD BELOW GAME -->
+
+        <!-- MOBILE AD -->
+
         <div class="mobile-ad">
             IKLAN
         </div>
 
-        <section class="stats" id="statsSection">
+
+        <!-- STATS -->
+
+        <section
+            class="stats"
+            id="statsSection">
 
             <div class="stats-grid">
 
                 <div>
-                    <div class="stat-number" id="played">0</div>
-                    <div class="stat-label">Dimainkan</div>
+
+                    <div
+                        class="stat-number"
+                        id="played">
+                        0
+                    </div>
+
+                    <div class="stat-label">
+                        Dimainkan
+                    </div>
+
                 </div>
 
-                <div>
-                    <div class="stat-number" id="winPercent">0</div>
-                    <div class="stat-label">Menang %</div>
-                </div>
 
                 <div>
-                    <div class="stat-number" id="streak">0</div>
-                    <div class="stat-label">Streak</div>
+
+                    <div
+                        class="stat-number"
+                        id="winPercent">
+                        0
+                    </div>
+
+                    <div class="stat-label">
+                        Menang %
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div
+                        class="stat-number"
+                        id="streak">
+                        0
+                    </div>
+
+                    <div class="stat-label">
+                        Streak
+                    </div>
+
                 </div>
 
             </div>
 
         </section>
 
+
+        <!-- INFORMATION -->
+
         <section class="info">
 
-            <h2>Apakah KataPantat?</h2>
+            <h2>
+                Apakah KataPantat?
+            </h2>
 
             <p>
                 KataPantat ialah permainan teka perkataan Bahasa Melayu
@@ -644,47 +758,100 @@ footer{
                 perkataan sasaran yang sama untuk semua pemain.
             </p>
 
-            <h3>Bagaimana untuk bermain?</h3>
+
+            <h3>
+                Bagaimana untuk bermain?
+            </h3>
 
             <ul>
-                <li>Teka perkataan Bahasa Melayu yang mempunyai 5 huruf.</li>
-                <li>Anda mempunyai 6 percubaan.</li>
-                <li>Hijau bermaksud huruf betul dan berada di tempat yang betul.</li>
-                <li>Kuning bermaksud huruf tersebut berada dalam perkataan tetapi di tempat yang salah.</li>
-                <li>Kelabu bermaksud huruf tersebut tidak terdapat dalam perkataan.</li>
+
+                <li>
+                    Teka perkataan Bahasa Melayu yang mempunyai 5 huruf.
+                </li>
+
+                <li>
+                    Anda mempunyai 6 percubaan.
+                </li>
+
+                <li>
+                    Hijau bermaksud huruf betul dan berada di tempat yang betul.
+                </li>
+
+                <li>
+                    Kuning bermaksud huruf tersebut berada dalam perkataan
+                    tetapi di tempat yang salah.
+                </li>
+
+                <li>
+                    Kelabu bermaksud huruf tersebut tidak terdapat dalam perkataan.
+                </li>
+
             </ul>
 
-            <h3>Permainan harian</h3>
+
+            <h3>
+                Permainan harian
+            </h3>
 
             <p>
                 Puzzle bertukar setiap hari. Cuba kekalkan streak anda
                 dan kongsi keputusan dengan rakan-rakan.
             </p>
 
-            <h3>Soalan Lazim</h3>
+
+            <h3>
+                Soalan Lazim
+            </h3>
+
 
             <p>
-                <strong>Adakah KataPantat percuma?</strong><br>
+
+                <strong>
+                    Adakah KataPantat percuma?
+                </strong>
+
+                <br>
+
                 Ya. Permainan asas boleh dimainkan secara percuma.
+
             </p>
 
+
             <p>
-                <strong>Bolehkah saya bermain di telefon?</strong><br>
+
+                <strong>
+                    Bolehkah saya bermain di telefon?
+                </strong>
+
+                <br>
+
                 Ya. KataPantat direka supaya boleh dimainkan pada telefon,
                 tablet dan komputer.
+
             </p>
 
+
             <p>
-                <strong>Berapa kali saya boleh bermain?</strong><br>
+
+                <strong>
+                    Berapa kali saya boleh bermain?
+                </strong>
+
+                <br>
+
                 Setiap puzzle harian hanya boleh dimainkan sekali.
+
             </p>
 
         </section>
 
     </main>
 
-    <!-- RIGHT DESKTOP AD -->
+
+    <!-- RIGHT AD -->
+
     <aside class="ad-rail">
+
         <div class="ad-sticky">
 
             <div class="ad-box">
@@ -696,13 +863,19 @@ footer{
             </div>
 
         </div>
+
     </aside>
 
 </div>
 
+
 <footer>
-    © 2026 KataPantat · Permainan perkataan Bahasa Melayu
+
+    © 2026 KataPantat ·
+    Permainan perkataan Bahasa Melayu
+
 </footer>
+
 
 <script>
 
@@ -721,90 +894,186 @@ let gameOver = false;
 let guesses = [];
 let keyboardState = {};
 
+
 /* =========================================================
-   STORAGE
+   DATE
 ========================================================= */
 
-const today = new Date().toISOString().slice(0,10);
+const today =
+    new Date().toISOString().slice(0,10);
 
-let stats = JSON.parse(
-    localStorage.getItem("kataPantatStats") ||
-    '{"played":0,"wins":0,"streak":0,"lastDate":"","completed":false}'
-);
+
+/* =========================================================
+   STATS
+========================================================= */
+
+let stats;
+
+try{
+
+    stats = JSON.parse(
+        localStorage.getItem("kataPantatStats") ||
+        '{"played":0,"wins":0,"streak":0,"lastDate":"","completed":false}'
+    );
+
+}catch(error){
+
+    stats = {
+        played:0,
+        wins:0,
+        streak:0,
+        lastDate:"",
+        completed:false
+    };
+
+}
+
 
 /* =========================================================
    WORD DATA
 ========================================================= */
 
 let answers = [];
+
 let acceptedWords = [];
 
-/*
-    IMPORTANT:
 
-    The game loads the dictionaries from your own GitHub
-    repository instead of an external dictionary website.
+/* =========================================================
+   CLEAN WORD
+========================================================= */
 
-    This avoids CORS and external-server problems.
-*/
+function cleanWord(word){
+
+    return String(word)
+        .replace(/^\uFEFF/, "")
+        .trim()
+        .toLowerCase()
+        .normalize("NFC");
+
+}
+
+
+/* =========================================================
+   VALID WORD
+========================================================= */
+
+function isFiveLetterWord(word){
+
+    return /^[a-z]{5}$/.test(word);
+
+}
+
+
+/* =========================================================
+   LOAD WORDS
+========================================================= */
 
 async function loadWords(){
 
+    console.log("Loading KataPantat dictionaries...");
+
+
+    /* =========================
+       ANSWERS
+    ========================= */
+
     try{
 
-        const answersResponse = await fetch(
-            "./data/answers.txt?v=" + Date.now()
-        );
+        const answersResponse =
+            await fetch(
+                "./data/answers.txt?v=" +
+                Date.now()
+            );
 
-        if(answersResponse.ok){
 
-            const text = await answersResponse.text();
+        if(!answersResponse.ok){
 
-            answers = text
-                .split(/
-?
-/)
-                .map(cleanWord)
-                .filter(isFiveLetterWord);
+            throw new Error(
+                "answers.txt HTTP " +
+                answersResponse.status
+            );
 
         }
 
+
+        const text =
+            await answersResponse.text();
+
+
+        answers =
+            text
+                .split(/\r?\n/)
+                .map(cleanWord)
+                .filter(isFiveLetterWord);
+
+
+        console.log(
+            "Answers loaded:",
+            answers.length
+        );
+
     }catch(error){
 
-        console.error("Answers failed to load:", error);
+        console.error(
+            "Answers failed to load:",
+            error
+        );
 
     }
 
 
+    /* =========================
+       ACCEPTED WORDS
+    ========================= */
+
     try{
 
-        const acceptedResponse = await fetch(
-            "./data/accepted.txt?v=" + Date.now()
-        );
+        const acceptedResponse =
+            await fetch(
+                "./data/accepted.txt?v=" +
+                Date.now()
+            );
 
-        if(acceptedResponse.ok){
 
-            const text = await acceptedResponse.text();
+        if(!acceptedResponse.ok){
 
-            acceptedWords = text
-                .split(/
-?
-/)
-                .map(cleanWord)
-                .filter(isFiveLetterWord);
+            throw new Error(
+                "accepted.txt HTTP " +
+                acceptedResponse.status
+            );
 
         }
 
+
+        const text =
+            await acceptedResponse.text();
+
+
+        acceptedWords =
+            text
+                .split(/\r?\n/)
+                .map(cleanWord)
+                .filter(isFiveLetterWord);
+
+
+        console.log(
+            "Accepted words loaded:",
+            acceptedWords.length
+        );
+
     }catch(error){
 
-        console.error("Accepted dictionary failed to load:", error);
+        console.error(
+            "Accepted dictionary failed to load:",
+            error
+        );
 
     }
 
 
-    /*
-        Every answer must also be a valid guess.
-    */
+    /* =========================
+       ADD ANSWERS TO ACCEPTED
+    ========================= */
 
     acceptedWords = [
         ...new Set([
@@ -814,13 +1083,18 @@ async function loadWords(){
     ];
 
 
-    /*
-        Safety fallback.
-    */
+    /* =========================
+       FALLBACK
+    ========================= */
 
     if(answers.length === 0){
 
-        answers = fallbackAnswers();
+        console.warn(
+            "No answers loaded. Using fallback."
+        );
+
+        answers =
+            fallbackAnswers();
 
     }
 
@@ -835,51 +1109,41 @@ async function loadWords(){
 
 
     console.log(
-        "KataPantat answers loaded:",
+        "Final answers:",
         answers.length
     );
 
     console.log(
-        "KataPantat accepted words loaded:",
+        "Final accepted words:",
         acceptedWords.length
     );
 
 
+    /* =========================
+       START GAME
+    ========================= */
+
     chooseDailyAnswer();
-    updateStats();
+
     createBoard();
 
-}
-
-function cleanWord(word){
-
-    return String(word)
-        .trim()
-        .toLowerCase()
-        .normalize("NFC");
+    updateStats();
 
 }
 
-function isFiveLetterWord(word){
-
-    return /^[a-z]{5}$/.test(word);
-
-}
 
 /* =========================================================
-   FALLBACK
+   FALLBACK ANSWERS
 ========================================================= */
 
 function fallbackAnswers(){
 
     return [
+
         "abang",
         "ambil",
         "ampun",
-        "anak",
         "angin",
-        "antara",
-        "ayam",
         "bakar",
         "balik",
         "bantu",
@@ -891,7 +1155,6 @@ function fallbackAnswers(){
         "biasa",
         "bilik",
         "bulan",
-        "burung",
         "cakap",
         "cepat",
         "cinta",
@@ -908,10 +1171,8 @@ function fallbackAnswers(){
         "gajah",
         "gagal",
         "gelap",
-        "gemuk",
         "hujan",
         "hutan",
-        "ibuku",
         "indah",
         "jalan",
         "jambu",
@@ -924,20 +1185,13 @@ function fallbackAnswers(){
         "katil",
         "kawan",
         "kecil",
-        "keluar",
         "kerja",
-        "kertas",
         "kilat",
         "kirim",
         "kotak",
-        "kucing",
-        "kunci",
-        "kurang",
         "lapan",
         "lepas",
         "limau",
-        "lima",
-        "luang",
         "malam",
         "malas",
         "manis",
@@ -952,7 +1206,6 @@ function fallbackAnswers(){
         "naik",
         "nama",
         "nanti",
-        "negara",
         "orang",
         "padam",
         "pahit",
@@ -989,30 +1242,28 @@ function fallbackAnswers(){
         "tanya",
         "tebal",
         "teman",
-        "tengah",
-        "tikus",
-        "tidur",
-        "tinggi",
-        "tolak",
         "tulis",
         "udara",
         "ulang",
         "untuk",
         "warna",
         "waktu"
+
     ].filter(isFiveLetterWord);
 
 }
 
+
 /* =========================================================
-   DAILY ANSWER
+   HASH
 ========================================================= */
 
 function hashString(str){
 
     let hash = 0;
 
-    for(let i=0;i<str.length;i++){
+
+    for(let i = 0; i < str.length; i++){
 
         hash =
             ((hash << 5) - hash) +
@@ -1022,105 +1273,198 @@ function hashString(str){
 
     }
 
+
     return Math.abs(hash);
 
 }
+
+
+/* =========================================================
+   DAILY ANSWER
+========================================================= */
 
 function chooseDailyAnswer(){
 
     if(!answers || answers.length === 0){
 
-        console.error("No answer words available.");
+        console.error(
+            "No answer words available."
+        );
 
-        showMessage("Kamus gagal dimuat.");
+        showMessage(
+            "Kamus gagal dimuat."
+        );
 
         return;
 
     }
 
+
     const seed =
         "KATAPANTAT-" +
         today;
 
+
     const index =
-        hashString(seed) % answers.length;
+        hashString(seed) %
+        answers.length;
 
-    answer = answers[index];
 
-    document.getElementById("puzzleInfo").textContent =
-        "Puzzle #" +
-        getPuzzleNumber() +
-        " · " +
-        formatDate();
+    answer =
+        answers[index];
+
+
+    console.log(
+        "Today's KataPantat answer:",
+        answer
+    );
+
+
+    const puzzleInfo =
+        document.getElementById(
+            "puzzleInfo"
+        );
+
+
+    if(puzzleInfo){
+
+        puzzleInfo.textContent =
+            "Puzzle #" +
+            getPuzzleNumber() +
+            " · " +
+            formatDate();
+
+    }
 
 }
+
+
+/* =========================================================
+   PUZZLE NUMBER
+========================================================= */
 
 function getPuzzleNumber(){
 
     const start =
-        new Date("2026-01-01T00:00:00");
+        new Date(
+            "2026-01-01T00:00:00"
+        );
+
 
     const current =
-        new Date(today + "T00:00:00");
+        new Date(
+            today +
+            "T00:00:00"
+        );
+
 
     return Math.floor(
-        (current-start) /
-        (1000*60*60*24)
+        (current - start) /
+        (1000 * 60 * 60 * 24)
     ) + 1;
 
 }
 
+
+/* =========================================================
+   DATE FORMAT
+========================================================= */
+
 function formatDate(){
 
-    return new Date(today+"T00:00:00")
-        .toLocaleDateString(
-            "ms-MY",
-            {
-                day:"numeric",
-                month:"long",
-                year:"numeric"
-            }
-        );
+    return new Date(
+        today +
+        "T00:00:00"
+    ).toLocaleDateString(
+        "ms-MY",
+        {
+            day:"numeric",
+            month:"long",
+            year:"numeric"
+        }
+    );
 
 }
 
+
 /* =========================================================
-   BOARD
+   CREATE BOARD
 ========================================================= */
 
 function createBoard(){
 
     const board =
-        document.getElementById("board");
+        document.getElementById(
+            "board"
+        );
+
+
+    if(!board){
+
+        console.error(
+            "Board element not found."
+        );
+
+        return;
+
+    }
+
 
     board.innerHTML = "";
 
-    for(let r=0;r<MAX_GUESSES;r++){
+
+    for(
+        let r = 0;
+        r < MAX_GUESSES;
+        r++
+    ){
 
         const row =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
-        row.className = "row";
 
-        for(let c=0;c<WORD_LENGTH;c++){
+        row.className =
+            "row";
+
+
+        for(
+            let c = 0;
+            c < WORD_LENGTH;
+            c++
+        ){
 
             const tile =
-                document.createElement("div");
+                document.createElement(
+                    "div"
+                );
 
-            tile.className = "tile";
+
+            tile.className =
+                "tile";
+
 
             tile.id =
                 `tile-${r}-${c}`;
+
 
             row.appendChild(tile);
 
         }
 
+
         board.appendChild(row);
 
     }
 
+
+    console.log(
+        "Board created."
+    );
+
 }
+
 
 /* =========================================================
    KEYBOARD
@@ -1128,35 +1472,56 @@ function createBoard(){
 
 document
     .querySelectorAll(".key")
-    .forEach(button=>{
+    .forEach(button => {
 
         button.addEventListener(
             "click",
-            ()=>{
-                handleKey(button.dataset.key);
+            () => {
+
+                handleKey(
+                    button.dataset.key
+                );
+
             }
         );
 
     });
 
+
+/* =========================================================
+   PHYSICAL KEYBOARD
+========================================================= */
+
 document.addEventListener(
     "keydown",
-    event=>{
+    event => {
 
-        if(gameOver) return;
+        if(gameOver){
+
+            return;
+
+        }
+
 
         const key =
             event.key.toLowerCase();
+
 
         if(key === "enter"){
 
             handleKey("enter");
 
-        }else if(key === "backspace"){
+        }
+
+        else if(key === "backspace"){
 
             handleKey("backspace");
 
-        }else if(/^[a-z]$/.test(key)){
+        }
+
+        else if(
+            /^[a-z]$/.test(key)
+        ){
 
             handleKey(key);
 
@@ -1165,34 +1530,48 @@ document.addEventListener(
     }
 );
 
+
 /* =========================================================
    INPUT
 ========================================================= */
 
 function handleKey(key){
 
-    if(gameOver) return;
+    if(gameOver){
+
+        return;
+
+    }
+
 
     if(key === "enter"){
 
         submitGuess();
+
         return;
 
     }
+
 
     if(key === "backspace"){
 
         currentGuess =
             currentGuess.slice(0,-1);
 
+
         updateCurrentRow();
+
         return;
 
     }
 
+
     if(/^[a-z]$/.test(key)){
 
-        if(currentGuess.length < WORD_LENGTH){
+        if(
+            currentGuess.length <
+            WORD_LENGTH
+        ){
 
             currentGuess += key;
 
@@ -1204,121 +1583,197 @@ function handleKey(key){
 
 }
 
+
+/* =========================================================
+   UPDATE CURRENT ROW
+========================================================= */
+
 function updateCurrentRow(){
 
-    for(let i=0;i<WORD_LENGTH;i++){
+    for(
+        let i = 0;
+        i < WORD_LENGTH;
+        i++
+    ){
 
         const tile =
             document.getElementById(
                 `tile-${currentRow}-${i}`
             );
 
+
+        if(!tile){
+
+            continue;
+
+        }
+
+
         tile.textContent =
             currentGuess[i] || "";
 
+
         tile.classList.toggle(
             "filled",
-            Boolean(currentGuess[i])
+            Boolean(
+                currentGuess[i]
+            )
         );
 
     }
 
 }
 
+
 /* =========================================================
-   GUESS VALIDATION
+   SUBMIT GUESS
 ========================================================= */
 
 function submitGuess(){
 
-    if(currentGuess.length !== WORD_LENGTH){
+    if(
+        currentGuess.length !==
+        WORD_LENGTH
+    ){
 
-        showMessage("Masukkan 5 huruf.");
+        showMessage(
+            "Masukkan 5 huruf."
+        );
+
+        return;
+
+    }
+
+
+    if(
+        !acceptedWords.includes(
+            currentGuess
+        )
+    ){
+
+        showMessage(
+            "Perkataan tidak dikenali."
+        );
 
         return;
 
     }
 
-    if(!acceptedWords.includes(currentGuess)){
-
-        showMessage("Perkataan tidak dikenali.");
-
-        return;
-
-    }
 
     evaluateGuess();
 
 }
 
+
+/* =========================================================
+   EVALUATE GUESS
+========================================================= */
+
 function evaluateGuess(){
 
     const result =
-        Array(WORD_LENGTH).fill("absent");
+        Array(
+            WORD_LENGTH
+        ).fill("absent");
+
 
     const answerLetters =
         answer.split("");
 
+
     const guessLetters =
         currentGuess.split("");
 
-    /*
-        FIRST PASS:
-        Correct letters
-    */
 
-    for(let i=0;i<WORD_LENGTH;i++){
+    /* FIRST PASS */
+
+    for(
+        let i = 0;
+        i < WORD_LENGTH;
+        i++
+    ){
 
         if(
             guessLetters[i] ===
             answerLetters[i]
         ){
 
-            result[i] = "correct";
+            result[i] =
+                "correct";
 
-            answerLetters[i] = null;
-            guessLetters[i] = null;
+
+            answerLetters[i] =
+                null;
+
+
+            guessLetters[i] =
+                null;
 
         }
 
     }
 
-    /*
-        SECOND PASS:
-        Present letters
-    */
 
-    for(let i=0;i<WORD_LENGTH;i++){
+    /* SECOND PASS */
 
-        if(guessLetters[i] === null){
+    for(
+        let i = 0;
+        i < WORD_LENGTH;
+        i++
+    ){
+
+        if(
+            guessLetters[i] ===
+            null
+        ){
 
             continue;
 
         }
+
 
         const index =
             answerLetters.indexOf(
                 guessLetters[i]
             );
 
+
         if(index !== -1){
 
-            result[i] = "present";
+            result[i] =
+                "present";
 
-            answerLetters[index] = null;
+
+            answerLetters[index] =
+                null;
 
         }
 
     }
 
-    for(let i=0;i<WORD_LENGTH;i++){
+
+    /* DISPLAY */
+
+    for(
+        let i = 0;
+        i < WORD_LENGTH;
+        i++
+    ){
 
         const tile =
             document.getElementById(
                 `tile-${currentRow}-${i}`
             );
 
-        tile.classList.add(result[i]);
+
+        if(tile){
+
+            tile.classList.add(
+                result[i]
+            );
+
+        }
+
 
         updateKeyboard(
             currentGuess[i],
@@ -1327,52 +1782,94 @@ function evaluateGuess(){
 
     }
 
-    guesses.push(currentGuess);
 
-    if(currentGuess === answer){
+    guesses.push(
+        currentGuess
+    );
+
+
+    /* WIN */
+
+    if(
+        currentGuess ===
+        answer
+    ){
 
         finishGame(true);
+
         return;
 
     }
+
+
+    /* NEXT ROW */
 
     currentRow++;
 
-    if(currentRow >= MAX_GUESSES){
+
+    if(
+        currentRow >=
+        MAX_GUESSES
+    ){
 
         finishGame(false);
+
         return;
 
     }
+
 
     currentGuess = "";
 
 }
 
-function updateKeyboard(letter,state){
+
+/* =========================================================
+   KEYBOARD STATE
+========================================================= */
+
+function updateKeyboard(
+    letter,
+    state
+){
 
     const button =
         document.querySelector(
             `.key[data-key="${letter}"]`
         );
 
-    if(!button) return;
+
+    if(!button){
+
+        return;
+
+    }
+
 
     const priority = {
+
         absent:1,
+
         present:2,
+
         correct:3
+
     };
+
 
     const oldState =
         keyboardState[letter];
 
+
     if(
         !oldState ||
-        priority[state] > priority[oldState]
+        priority[state] >
+        priority[oldState]
     ){
 
-        keyboardState[letter] = state;
+        keyboardState[letter] =
+            state;
+
 
         button.classList.remove(
             "absent",
@@ -1380,42 +1877,55 @@ function updateKeyboard(letter,state){
             "correct"
         );
 
-        button.classList.add(state);
+
+        button.classList.add(
+            state
+        );
 
     }
 
 }
 
+
 /* =========================================================
-   GAME FINISH
+   FINISH GAME
 ========================================================= */
 
 function finishGame(won){
 
     gameOver = true;
 
+
     stats.played++;
+
 
     if(won){
 
         stats.wins++;
 
+
         updateStreak();
+
 
         const score =
             Math.max(
                 20,
-                100 - ((currentRow) * 15)
+                100 -
+                (currentRow * 15)
             );
+
 
         showResult(
             true,
             score
         );
 
-    }else{
+    }
+
+    else{
 
         stats.streak = 0;
+
 
         showResult(
             false,
@@ -1424,38 +1934,77 @@ function finishGame(won){
 
     }
 
+
     stats.completed = true;
+
     stats.lastDate = today;
+
 
     localStorage.setItem(
         "kataPantatStats",
         JSON.stringify(stats)
     );
 
+
     updateStats();
 
 }
 
-function showResult(won,score){
 
-    document.getElementById("result").style.display =
+/* =========================================================
+   SHOW RESULT
+========================================================= */
+
+function showResult(
+    won,
+    score
+){
+
+    const result =
+        document.getElementById(
+            "result"
+        );
+
+
+    result.style.display =
         "block";
 
-    document.getElementById("resultTitle").textContent =
-        won ? "Tahniah! 🎉" : "Cuba Lagi Esok!";
 
-    document.getElementById("resultScore").textContent =
-        won ? score + "/100" : "0/100";
-
-    document.getElementById("resultAnswer").textContent =
+    document.getElementById(
+        "resultTitle"
+    ).textContent =
         won
-        ? "Anda berjaya dalam " + guesses.length + " percubaan."
-        : "Jawapan hari ini ialah: " + answer.toUpperCase();
+        ? "Tahniah! 🎉"
+        : "Cuba Lagi Esok!";
 
-    document.getElementById("shareText").textContent =
+
+    document.getElementById(
+        "resultScore"
+    ).textContent =
+        won
+        ? score + "/100"
+        : "0/100";
+
+
+    document.getElementById(
+        "resultAnswer"
+    ).textContent =
+        won
+        ? "Anda berjaya dalam " +
+          guesses.length +
+          " percubaan."
+
+        : "Jawapan hari ini ialah: " +
+          answer.toUpperCase();
+
+
+    document.getElementById(
+        "shareText"
+    ).textContent =
         generateShareText(won);
 
 }
+
 
 /* =========================================================
    STREAK
@@ -1466,33 +2015,52 @@ function updateStreak(){
     if(!stats.lastDate){
 
         stats.streak = 1;
-        return;
-
-    }
-
-    if(stats.lastDate === today){
 
         return;
 
     }
+
+
+    if(
+        stats.lastDate ===
+        today
+    ){
+
+        return;
+
+    }
+
 
     const previous =
-        new Date(stats.lastDate);
+        new Date(
+            stats.lastDate +
+            "T00:00:00"
+        );
+
 
     const current =
-        new Date(today);
+        new Date(
+            today +
+            "T00:00:00"
+        );
+
 
     const difference =
         Math.round(
-            (current-previous) /
-            (1000*60*60*24)
+            (current - previous) /
+            (1000 * 60 * 60 * 24)
         );
 
-    if(difference === 1){
+
+    if(
+        difference === 1
+    ){
 
         stats.streak++;
 
-    }else{
+    }
+
+    else{
 
         stats.streak = 1;
 
@@ -1500,67 +2068,120 @@ function updateStreak(){
 
 }
 
+
 /* =========================================================
    STATS
 ========================================================= */
 
 function updateStats(){
 
-    document.getElementById("played").textContent =
-        stats.played;
+    const played =
+        document.getElementById(
+            "played"
+        );
 
-    document.getElementById("winPercent").textContent =
-        stats.played
-        ? Math.round(
-            (stats.wins / stats.played) * 100
-          )
-        : 0;
 
-    document.getElementById("streak").textContent =
-        stats.streak;
+    const winPercent =
+        document.getElementById(
+            "winPercent"
+        );
+
+
+    const streak =
+        document.getElementById(
+            "streak"
+        );
+
+
+    if(played){
+
+        played.textContent =
+            stats.played;
+
+    }
+
+
+    if(winPercent){
+
+        winPercent.textContent =
+            stats.played
+            ? Math.round(
+                (
+                    stats.wins /
+                    stats.played
+                ) * 100
+              )
+            : 0;
+
+    }
+
+
+    if(streak){
+
+        streak.textContent =
+            stats.streak;
+
+    }
 
 }
+
+
+/* =========================================================
+   TOGGLE STATS
+========================================================= */
 
 function toggleStats(){
 
     document
-        .getElementById("statsSection")
+        .getElementById(
+            "statsSection"
+        )
         .scrollIntoView({
             behavior:"smooth"
         });
 
 }
 
+
 /* =========================================================
    SHARE
 ========================================================= */
 
-function generateShareText(won){
+function generateShareText(
+    won
+){
 
     let result =
         `KataPantat #${getPuzzleNumber()}\n`;
 
+
     if(won){
 
         result +=
-            "🟩".repeat(
-                1
-            ) +
-            ` Menang dalam ${guesses.length}/6\n`;
+            `🟩 Menang dalam ${guesses.length}/6\n`;
 
-    }else{
+    }
+
+    else{
 
         result +=
             "❌ Tidak berjaya\n";
 
     }
 
+
     result +=
         "Main KataPantat!";
+
 
     return result;
 
 }
+
+
+/* =========================================================
+   SHARE RESULT
+========================================================= */
 
 async function shareResult(){
 
@@ -1569,28 +2190,49 @@ async function shareResult(){
             guesses.includes(answer)
         );
 
+
     if(navigator.share){
 
         try{
 
             await navigator.share({
-                title:"KataPantat",
-                text:text
+
+                title:
+                    "KataPantat",
+
+                text:
+                    text
+
             });
 
-        }catch(error){}
+        }
 
-    }else{
+        catch(error){
+
+            console.log(
+                "Share cancelled."
+            );
+
+        }
+
+    }
+
+    else{
 
         try{
 
-            await navigator.clipboard.writeText(text);
+            await navigator.clipboard.writeText(
+                text
+            );
+
 
             showMessage(
                 "Keputusan telah disalin!"
             );
 
-        }catch(error){
+        }
+
+        catch(error){
 
             showMessage(
                 "Tidak dapat menyalin keputusan."
@@ -1602,62 +2244,76 @@ async function shareResult(){
 
 }
 
+
 /* =========================================================
    MESSAGE
 ========================================================= */
 
 let messageTimer;
 
+
 function showMessage(text){
 
     const message =
-        document.getElementById("message");
+        document.getElementById(
+            "message"
+        );
 
-    message.textContent = text;
 
-    clearTimeout(messageTimer);
+    if(!message){
+
+        return;
+
+    }
+
+
+    message.textContent =
+        text;
+
+
+    clearTimeout(
+        messageTimer
+    );
+
 
     messageTimer =
         setTimeout(
-            ()=>{
-                message.textContent = "";
+            () => {
+
+                message.textContent =
+                    "";
+
             },
             2200
         );
 
 }
 
+
 /* =========================================================
-   PREVENT REPLAY
+   RESTORE DAILY GAME
 ========================================================= */
 
 function restoreCompletedGame(){
 
-    if(stats.lastDate !== today){
+    if(
+        stats.lastDate !==
+        today
+    ){
 
-        stats.completed = false;
+        stats.completed =
+            false;
 
     }
 
 }
+
 
 /* =========================================================
    START
 ========================================================= */
 
 restoreCompletedGame();
-
-if(
-    stats.completed &&
-    stats.lastDate === today
-){
-
-    /*
-        For a completed puzzle, we still load the game
-        so the board/result can be shown normally.
-    */
-
-}
 
 loadWords();
 
@@ -1667,3 +2323,4 @@ loadWords();
 
 </body>
 </html>
+```
