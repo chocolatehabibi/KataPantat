@@ -1,21 +1,25 @@
-KataPantat uses Malay dictionary data derived from the
-Malay (Malaysia) Hunspell dictionary ecosystem.
+KataPantat Malay Dictionary Attribution
 
-The Malay dictionary is listed by the Hunspell dictionary
-catalogue under the GNU Free Documentation License (GFDL).
+The broad Malay dictionary data used by KataPantat is sourced from:
 
-This file is provided to preserve attribution and licensing
-information for the dictionary data used by KataPantat.
+tdulcet/compact-dictionaries
 
-KataPantat itself is an independent game and website and is
-not affiliated with Hunspell, LibreOffice, OpenOffice or
-the original dictionary contributors.
+The Malay dictionary is derived from Wiktionary data.
 
-Dictionary source:
-Malay (Malaysia) Hunspell dictionary (ms_MY)
+Wiktionary data is licensed under:
 
-Hunspell dictionary catalogue:
-https://github.com/elastic/hunspell
+Creative Commons Attribution-ShareAlike 3.0 Unported License (CC BY-SA 3.0)
 
-Please retain the applicable upstream licence and attribution
-requirements when distributing or modifying dictionary data.
+and
+
+GNU Free Documentation License (GFDL).
+
+Source:
+https://github.com/tdulcet/compact-dictionaries
+
+The dictionary repository states that users must attribute Wiktionary.
+
+KataPantat does not claim ownership of the underlying dictionary data.
+
+The KataPantat game software, design, branding and original game
+implementation are separate from the underlying dictionary data.
