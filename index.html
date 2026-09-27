@@ -753,7 +753,7 @@ async function loadWords(){
     try{
 
         const answersResponse = await fetch(
-            "data/answers.txt?version=2"
+            "./data/answers.txt?v=" + Date.now()
         );
 
         if(answersResponse.ok){
@@ -761,7 +761,9 @@ async function loadWords(){
             const text = await answersResponse.text();
 
             answers = text
-                .split(/\r?\n/)
+                .split(/
+?
+/)
                 .map(cleanWord)
                 .filter(isFiveLetterWord);
 
@@ -769,14 +771,15 @@ async function loadWords(){
 
     }catch(error){
 
-        console.log("Answers failed to load.");
+        console.error("Answers failed to load:", error);
 
     }
+
 
     try{
 
         const acceptedResponse = await fetch(
-            "data/accepted.txt?version=2"
+            "./data/accepted.txt?v=" + Date.now()
         );
 
         if(acceptedResponse.ok){
@@ -784,7 +787,9 @@ async function loadWords(){
             const text = await acceptedResponse.text();
 
             acceptedWords = text
-                .split(/\r?\n/)
+                .split(/
+?
+/)
                 .map(cleanWord)
                 .filter(isFiveLetterWord);
 
@@ -792,12 +797,13 @@ async function loadWords(){
 
     }catch(error){
 
-        console.log("Accepted dictionary failed to load.");
+        console.error("Accepted dictionary failed to load:", error);
 
     }
 
+
     /*
-        Every answer is automatically an accepted guess.
+        Every answer must also be a valid guess.
     */
 
     acceptedWords = [
@@ -807,9 +813,9 @@ async function loadWords(){
         ])
     ];
 
+
     /*
-        If the dictionary failed completely,
-        still allow the answer list to work.
+        Safety fallback.
     */
 
     if(answers.length === 0){
@@ -818,6 +824,7 @@ async function loadWords(){
 
     }
 
+
     if(acceptedWords.length === 0){
 
         acceptedWords = [
@@ -825,6 +832,18 @@ async function loadWords(){
         ];
 
     }
+
+
+    console.log(
+        "KataPantat answers loaded:",
+        answers.length
+    );
+
+    console.log(
+        "KataPantat accepted words loaded:",
+        acceptedWords.length
+    );
+
 
     chooseDailyAnswer();
     updateStats();
@@ -1008,6 +1027,16 @@ function hashString(str){
 }
 
 function chooseDailyAnswer(){
+
+    if(!answers || answers.length === 0){
+
+        console.error("No answer words available.");
+
+        showMessage("Kamus gagal dimuat.");
+
+        return;
+
+    }
 
     const seed =
         "KATAPANTAT-" +
